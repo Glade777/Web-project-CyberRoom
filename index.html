@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | CyberRoom</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="media.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="navbar">
+          <a href="#" class="logo">CyberRoom</a>
+          <div class="burger-icon">
+            <span></span> <span></span> <span></span>
+          </div>
+          <nav class="menu">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#tournaments">Tournament</a></li>
+              <li><a href="#games">Games</a></li>
+              <li><a href="#pricing">Prices</a></li>
+              <li><a href="#contacts">Contacts</a></li>
+              <li><a class="login-btn" href="login.html">Login</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="hero">
+          <h1>Welcome to <span>CyberRoom</span></h1>
+          <p>Your neon world of gaming</p>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="games" id="games">
+        <h2>Our Games</h2>
+        <div class="gallery">
+          <div class="card" data-text="CS2">
+            <img src="assets/cs22.jpg" alt="CS2" />
+          </div>
+          <div class="card" data-text="Cyberpunk 2077">
+            <img src="assets/Cyberpunk_2077_box_art.jpg" alt="Cyberpunk 2077" />
+          </div>
+          <div class="card" data-text="Dota 2">
+            <img src="assets/dota2.jpg" alt="Dota 2" />
+          </div>
+          <div class="card" data-text="League of Legends">
+            <img src="assets/loll.jpg" alt="League of Legends" />
+          </div>
+          <div class="card" data-text="PUBG">
+            <img
+              src="assets/PlayerUnknown's_Battlegrounds_Mobile.jpg"
+              alt="PUBG"
+            />
+          </div>
+          <div class="card" data-text="Warzone">
+            <img src="assets/header.jpg" alt="Warzone" />
+          </div>
+          <div class="card" data-text="Dead by Daylight">
+            <img
+              src="assets/Dead_by_Daylight_Steam_header.jpg"
+              alt="Dead by Daylight"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="tournaments" id="tournaments">
+        <h2>Upcoming Tournaments</h2>
+        <div class="tournament-cards">
+          <div class="tournament-card">
+            <h3>CS2 Championship</h3>
+            <p>Starts: 15 Oct 2025 | Prize: $5000</p>
+            <a href="#" class="btn">Register</a>
+          </div>
+          <div class="tournament-card">
+            <h3>Dota 2 Showdown</h3>
+            <p>Starts: 22 Oct 2025 | Prize: $3000</p>
+            <a href="#" class="btn">Register</a>
+          </div>
+          <div class="tournament-card">
+            <h3>League of Legends Clash</h3>
+            <p>Starts: 30 Oct 2025 | Prize: $4000</p>
+            <a href="#" class="btn">Register</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-cards">
+          <div class="pricing-card">
+            <h3>Hourly</h3>
+            <p>$5 per hour</p>
+          </div>
+          <div class="pricing-card">
+            <h3>Daily</h3>
+            <p>$30 per day</p>
+          </div>
+          <div class="pricing-card">
+            <h3>Weekly</h3>
+            <p>$150 per week</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about-container">
+          <div class="about-map">
+            <iframe
+              width="520"
+              height="400"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%D0%AF%D0%BD%D0%B3%D0%B5%D0%BB%D1%8F%2020%20Kyiv+()&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ></iframe>
+            <a href="http://maps-generator.com/uk">http://maps-generator.com</a>
+            <script
+              type="text/javascript"
+              src="https://embedmaps.com/google-maps-authorization/script.js?id=97fc9a42c8506b26262bbcdf7219bbb336efe2f1"
+            ></script>
+          </div>
+          <div class="about-text">
+            <h2>About <span>Us</span></h2>
+            <p>
+              We are a passionate team of gamers and developers dedicated to
+              creating immersive, high-quality gaming experiences that connect
+              people around the world. Our mission is to push the boundaries of
+              technology and art to bring you unforgettable adventures.
+            </p>
+            <p>
+              Every project we create is powered by innovation, creativity, and
+              community spirit. We believe in games that inspire and unite.
+            </p>
+            <a href="#games" class="btn">Explore Games</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="#" class="logo">CyberRoom</a>
+          </div>
+
+          <div class="footer-links">
+            <a href="#games">Games</a>
+            <a href="#about">About</a>
+            <a href="#">Support</a>
+            <a href="#">Privacy</a>
+          </div>
+
+          <div class="footer-contacts" id="contacts">
+            <a
+              href="https://mail.google.com/mail/?view=cm&to=info.cyberroom@gmail.com"
+              target="_blank"
+            >
+              <i class="fa-solid fa-envelope"></i> info.cyberroom@gmail.com
+            </a>
+            <a href="tel:+380999999999">
+              <i class="fa-solid fa-phone"></i> +38 (099) 999-99-99
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-location-dot"></i> Kyiv, Ukraine
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 CyberRoom. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a61ac2150b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

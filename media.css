@@ -1,0 +1,123 @@
+@media (max-width: 1026px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: left 0.3s ease;
+    z-index: 100;
+  }
+
+  .menu.active {
+    left: 0;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 60px;
+  }
+
+  .burger-icon {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 101;
+  }
+}
+
+@media (min-width: 1026px) {
+  .burger-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 1026px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-links,
+  .footer-contacts {
+    align-items: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1306px) {
+  .about-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 530px) {
+  .logo {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+  }
+
+  .navbar {
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom: 0;
+    padding: 30px 60px;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .games h2 {
+    font-size: 15px;
+  }
+  .card {
+    border-radius: none;
+  }
+
+  .card:not(:first-child) {
+    display: none;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .tournaments h2 {
+    font-size: 15px;
+  }
+
+  .about-map iframe {
+    height: clac(100% + 2px);
+    width: 99%;
+  }
+}
