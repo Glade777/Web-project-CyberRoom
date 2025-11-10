@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Турніри</title>
+    <link rel="stylesheet" href="/css/loginStyle.css" />
+    <link rel="stylesheet" href="/css/user-tournaments.css" />
+  </head>
+
+  <body class="user-page">
+    <header class="user-navbar">
+      <a href="user.html" class="brand"><span>User</span></a>
+      <nav class="nav">
+        <a href="user.html#bookings">Мої бронювання</a>
+        <a href="user.html#hall">Зал</a>
+        <a class="active" href="user-tournaments.html">Турніри</a>
+        <a href="profile.html">Профіль</a>
+      </nav>
+      <div class="user-mini">
+        <img src="assets/avatar.png" alt="Avatar" />
+        <span>username</span>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="panel tabs">
+        <nav class="tabbar" aria-label="Фільтр турнірів">
+          <a class="tab active" href="#list">Усі</a>
+          <a class="tab" href="#list">Набір</a>
+          <a class="tab" href="#list">Активні</a>
+          <a class="tab" href="#list">Минулі</a>
+        </nav>
+      </section>
+
+      <section class="panel" id="list">
+        <h2>Заплановані події</h2>
+        <div class="cards">
+          <article class="card soon">
+            <div class="media"></div>
+            <div class="body">
+              <div class="head">
+                <h3>Valorant 5v5 Cup</h3>
+                <span class="badge soon">Набір</span>
+              </div>
+              <div class="meta">
+                <span class="chip">Старт: 2025-11-02 12:00</span>
+                <span class="chip">Внесок: ₴200/учасник</span>
+                <span class="chip">Приз: ₴10 000</span>
+              </div>
+              <p class="muted">Формат: 5v5, BO3, Double Elimination</p>
+              <div class="row-actions">
+                <a class="btn btn-primary" href="#details">Зареєструватись</a>
+                <a class="btn btn-outline" href="#details">Деталі</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card busy">
+            <div class="media"></div>
+            <div class="body">
+              <div class="head">
+                <h3>CS2 Weekend</h3>
+                <span class="badge busy">Активний</span>
+              </div>
+              <div class="meta">
+                <span class="chip">Старт: 2025-10-25 10:00</span>
+                <span class="chip">BO3</span>
+                <span class="chip">Соло/Команди</span>
+              </div>
+              <p class="muted">
+                Розклад на сторінці турніру. Приєднуйся до трансляції в залі.
+              </p>
+              <div class="row-actions">
+                <a class="btn btn-outline" href="#details">Деталі</a>
+                <a class="btn btn-outline" href="#details">Сітка</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card free">
+            <div class="media"></div>
+            <div class="body">
+              <div class="head">
+                <h3>LoL Solo Queue Night</h3>
+                <span class="badge free">Відкрито</span>
+              </div>
+              <div class="meta">
+                <span class="chip">Старт: 2025-11-10 18:00</span>
+                <span class="chip">Free Entry</span>
+                <span class="chip">Подарунки</span>
+              </div>
+              <p class="muted">Легка вечірня подія з призами від партнерів.</p>
+              <div class="row-actions">
+                <a class="btn btn-primary" href="#details">Участь</a>
+                <a class="btn btn-outline" href="#details">Деталі</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="details">
+        <h2>Деталі турніру</h2>
+        <div class="details-grid">
+          <div class="about">
+            <h3>Valorant 5v5 Cup</h3>
+            <p class="muted">
+              Регламент: 5v5, BO3, Double Elimination. Список мап — Ascent,
+              Haven, Bind. Вимоги: власний Riot-акаунт, мінімальний рейтинг —
+              Silver I.
+            </p>
+            <ul class="bullet">
+              <li>Дата старту: 2025-11-02 12:00</li>
+              <li>Реєстрація: до 2025-11-01 20:00</li>
+              <li>Призовий фонд: ₴10 000</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="faq">
+        <h2>FAQ</h2>
+        <div class="faq">
+          <div class="q">
+            <h4>Як зареєструватись на турнір?</h4>
+            <p class="muted">
+              Обери турнір зі списку та натисни «Зареєструватись». Далі слідуй
+              інструкціям на формі.
+            </p>
+          </div>
+          <div class="q">
+            <h4>Чи можна повертати внесок?</h4>
+            <p class="muted">
+              Повернення можливе за 24 години до початку турніру (уточнюється в
+              правилах події).
+            </p>
+          </div>
+          <div class="q">
+            <h4>Чи є командний/соло формат?</h4>
+            <p class="muted">
+              Залежить від події. Дивись позначки «Соло», «Команди», «Обидва» у
+              картках турнірів.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

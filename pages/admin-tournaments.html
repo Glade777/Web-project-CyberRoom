@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Адмін · Турніри</title>
+    <link rel="stylesheet" href="../css/loginStyle.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+
+  <body class="admin-page">
+    <header class="admin-navbar">
+      <a href="admin.html" class="brand">NEON<span>ARENA</span> · Admin</a>
+    </header>
+
+    <div class="admin-shell">
+      <aside class="sidebar">
+        <nav>
+          <a href="admin.html">Комп’ютери</a>
+          <a class="active" href="admin-tournaments.html">Турніри</a>
+          <a href="admin-orders.html">Замовлення</a>
+          <a class="danger" href="logout.html">Вихід</a>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <h1>Керування турнірами</h1>
+        <section class="panel">
+          <h2>Створити / Редагувати турнір</h2>
+          <form class="pc-form">
+            <div class="row">
+              <div class="field">
+                <label>Назва турніру</label>
+                <input placeholder="Valorant Cup" />
+              </div>
+              <div class="field">
+                <label>Гра</label>
+                <input placeholder="Valorant" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label>Дата</label>
+                <input type="date" />
+              </div>
+              <div class="field">
+                <label>Призовий фонд, ₴</label>
+                <input type="number" placeholder="10000" />
+              </div>
+            </div>
+            <div class="actions">
+              <button class="btn btn-primary">Зберегти</button>
+              <button class="btn btn-outline" type="reset">Очистити</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h2>Список турнірів</h2>
+          <div class="cards">
+            <article class="card">
+              <div class="body">
+                <h3>Valorant 5v5 Cup</h3>
+                <p class="muted">Старт 02.11.2025 — Приз ₴10 000</p>
+                <div class="row-actions">
+                  <a class="btn btn-outline">Редагувати</a>
+                  <button class="btn btn-outline">Видалити</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

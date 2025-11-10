@@ -448,6 +448,10 @@ body {
   box-shadow: 0 0 15px #00f7ff;
 }
 
+.about-map a {
+  visibility: hidden;
+}
+
 .about-text {
   max-width: 600px;
 }
@@ -552,8 +556,12 @@ body {
 .footer-bottom {
   border-top: 1px solid #222;
   position: relative;
-  left: -3%;
   padding-top: 20px;
   font-size: 14px;
   color: #888;
+}
+
+.footer-bottom p {
+  position: relative;
+  left: -3%;
 }

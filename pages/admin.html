@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+
+    <link rel="stylesheet" href="/css/loginStyle.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+
+  <body class="admin-page">
+    <header class="admin-navbar">
+      <a href="#" class="brand">Admin</a>
+      <div class="admin-actions">
+        <div class="user">
+          <img src="assets/avatar.png" alt="Admin" />
+          <span>Admin</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="admin-shell">
+      <aside class="sidebar">
+        <nav>
+          <a class="active" href="#">Комп’ютери</a>
+          <a href="/pages/admin-tournaments.html">Турніри</a>
+          <a href="/pages/admin-orders.html">Замовлення</a>
+
+          <a class="danger" href="#">Вихід</a>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <h1>Панель адміністратора</h1>
+
+        <section class="panel">
+          <h2>Додати / Редагувати ПК</h2>
+          <form class="pc-form">
+            <div class="row">
+              <div class="field">
+                <label for="name">Назва / № місця</label>
+                <input id="name" placeholder="PC-A1 / PC-B2" required />
+              </div>
+              <div class="field">
+                <label for="price">Ціна за год, ₴</label>
+                <input id="price" type="number" min="0" placeholder="120" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="cpu">CPU</label>
+                <input id="cpu" placeholder="Ryzen 5 5600" />
+              </div>
+              <div class="field">
+                <label for="gpu">GPU</label>
+                <input id="gpu" placeholder="RTX 3060" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="ram">RAM</label>
+                <input id="ram" placeholder="16GB" />
+              </div>
+              <div class="field">
+                <label for="storage">SSD/HDD</label>
+                <input id="storage" placeholder="512GB NVMe" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="zone">Ряд / Сектор</label>
+                <input id="zone" placeholder="Row A" />
+              </div>
+              <div class="field">
+                <label for="status">Статус</label>
+                <select id="status">
+                  <option value="free">Вільний</option>
+                  <option value="busy">Зайнятий</option>
+                  <option value="soon">Скоро звільниться</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="desc">Опис</label>
+              <textarea
+                id="desc"
+                placeholder="Додаткові деталі, наприклад, стан, оновлення..."
+              ></textarea>
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-primary" type="submit">Зберегти</button>
+              <button class="btn btn-outline" type="reset">Очистити</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h2>Список комп’ютерів</h2>
+          <div class="cards">
+            <article class="card free">
+              <div class="media"></div>
+              <div class="body">
+                <div class="header">
+                  <h3>PC-A1</h3>
+                  <span class="badge free">Вільний</span>
+                </div>
+                <div class="specs">
+                  <span class="chip">Ryzen 5 5600</span>
+                  <span class="chip">RTX 3060</span>
+                  <span class="chip">16GB RAM</span>
+                  <span class="chip">₴120/год</span>
+                </div>
+                <div class="row-actions">
+                  <a class="btn btn-outline">Редагувати</a>
+                  <button class="btn btn-outline">Видалити</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card busy">
+              <div class="media"></div>
+              <div class="body">
+                <div class="header">
+                  <h3>PC-A2</h3>
+                  <span class="badge busy">Зайнятий</span>
+                </div>
+                <div class="specs">
+                  <span class="chip">Ryzen 7 5800X</span>
+                  <span class="chip">RTX 4070</span>
+                  <span class="chip">32GB RAM</span>
+                  <span class="chip">₴160/год</span>
+                </div>
+                <p class="muted">До: 16:30</p>
+                <div class="row-actions">
+                  <a class="btn btn-outline">Редагувати</a>
+                  <button class="btn btn-danger">Достроково завершити</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Мапа залу</h2>
+            <div class="legend">
+              <span class="badge free">Вільний</span>
+              <span class="badge busy">Зайнятий</span>
+              <span class="badge soon">Скоро звільниться</span>
+            </div>
+          </div>
+
+          <div class="zones">
+            <div class="zone">
+              <h3>Ряд A</h3>
+              <div class="row">
+                <div class="seat free">
+                  <h4>PC-A1</h4>
+                  <span class="badge free">Вільний</span>
+                </div>
+                <div class="seat busy">
+                  <h4>PC-A2</h4>
+                  <span class="badge busy">До 16:30</span>
+                </div>
+                <div class="seat soon">
+                  <h4>PC-A3</h4>
+                  <span class="badge soon">7 хв</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="zone">
+              <h3>Ряд B</h3>
+              <div class="row">
+                <div class="seat free">
+                  <h4>PC-B1</h4>
+                  <span class="badge free">Вільний</span>
+                </div>
+                <div class="seat busy">
+                  <h4>PC-B2</h4>
+                  <span class="badge busy">До 15:50</span>
+                </div>
+                <div class="seat free">
+                  <h4>PC-B3</h4>
+                  <span class="badge free">Вільний</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

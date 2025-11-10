@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberRoom · Hall</title>
+    <link rel="stylesheet" href="/css/hall.css" />
+
+    <style>
+      /* ДОДАТКОВА ПАНЕЛЬ */
+      .side-panel {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 360px;
+        height: 100%;
+        background: #121212;
+        color: #fff;
+        border-left: 2px solid #0ff;
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+        padding: 1.5rem;
+        transition: right 0.4s ease;
+        z-index: 9999;
+        overflow-y: auto;
+      }
+      .side-panel.active {
+        right: 0;
+      }
+      .side-panel h2 {
+        color: #0ff;
+        margin-top: 0;
+      }
+      .side-panel .close-btn {
+        background: transparent;
+        border: none;
+        color: #0ff;
+        font-size: 1.5rem;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        cursor: pointer;
+      }
+      .side-panel .btn {
+        background: #0ff;
+        color: #000;
+        border: none;
+        padding: 0.6rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .side-panel .btn-outline {
+        background: transparent;
+        border: 1px solid #0ff;
+        color: #0ff;
+      }
+      .side-panel hr {
+        border: none;
+        border-top: 1px solid #333;
+        margin: 1rem 0;
+      }
+      .side-panel input[type="number"] {
+        width: 60px;
+        background: #111;
+        color: #eee;
+        border: 1px solid #555;
+        border-radius: 5px;
+        padding: 0.3rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <a href="../index.html" class="brand">Cyber<span>Room</span> · Hall</a>
+    </header>
+
+    <main class="hall">
+      <h1>Мапа залу комп’ютерів</h1>
+
+      <div class="legend">
+        <span class="badge free">Вільний</span>
+        <span class="badge busy">Зайнятий</span>
+        <span class="badge soon">Скоро звільниться</span>
+      </div>
+
+      <section class="zones">
+        <!-- Ряд A -->
+        <div class="zone">
+          <h2>Ряд A</h2>
+          <div class="row">
+            <div class="seat free" data-code="PC-01">
+              <h3>PC-A1</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+            <div class="seat free" data-code="PC-02">
+              <h3>PC-A2</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+            <div class="seat free" data-code="PC-03">
+              <h3>PC-A3</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+            <div class="seat free" data-code="PC-04">
+              <h3>PC-A4</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ряд B -->
+        <div class="zone">
+          <h2>Ряд B</h2>
+          <div class="row">
+            <div class="seat free" data-code="PC-05">
+              <h3>PC-B1</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+            <div class="seat free" data-code="PC-06">
+              <h3>PC-B2</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+            <div class="seat free" data-code="PC-07">
+              <h3>PC-B3</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+            <div class="seat free" data-code="PC-08">
+              <h3>PC-B4</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ряд C -->
+        <div class="zone">
+          <h2>Ряд C</h2>
+          <div class="row">
+            <div class="seat free" data-code="PC-09">
+              <h3>PC-C1</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+            <div class="seat free" data-code="PC-10">
+              <h3>PC-C2</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+            <div class="seat free" data-code="PC-11">
+              <h3>PC-C3</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+            <div class="seat free" data-code="PC-12">
+              <h3>PC-C4</h3>
+              <span class="badge free">Вільний</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside id="side-panel" class="side-panel">
+      <button class="close-btn">&times;</button>
+      <h2 id="p-title">PC-XXX</h2>
+      <p id="p-specs" class="muted">...</p>
+
+      <div><strong>Ціна/год:</strong> <span id="p-price">—</span></div>
+      <div>
+        <strong>Статус:</strong> <span id="p-status" class="badge">...</span>
+      </div>
+      <div id="p-until-wrap" style="display: none">
+        <strong>Зайнятий до:</strong> <span id="p-until">--:--</span>
+      </div>
+
+      <hr />
+      <label>
+        Тривалість (год):
+        <input id="p-hours" type="number" min="1" max="6" value="1" />
+      </label>
+
+      <div class="actions">
+        <button id="p-book" class="btn">Оплатити / Забронювати</button>
+        <button id="p-cancel" class="btn btn-outline">Скасувати</button>
+      </div>
+    </aside>
+
+    <script>
+      const userId = Number(localStorage.getItem("userId") || 1);
+      const panel = document.getElementById("side-panel");
+      const pTitle = document.getElementById("p-title");
+      const pSpecs = document.getElementById("p-specs");
+      const pPrice = document.getElementById("p-price");
+      const pStatus = document.getElementById("p-status");
+      const pUntilWrap = document.getElementById("p-until-wrap");
+      const pUntil = document.getElementById("p-until");
+      const pHours = document.getElementById("p-hours");
+      const btnBook = document.getElementById("p-book");
+      const btnCancel = document.getElementById("p-cancel");
+      const btnClose = document.querySelector(".close-btn");
+
+      let currentPC = null;
+
+      function formatTime(s) {
+        try {
+          const d = new Date(s);
+          return `${String(d.getHours()).padStart(2, "0")}:${String(
+            d.getMinutes()
+          ).padStart(2, "0")}`;
+        } catch {
+          return s;
+        }
+      }
+
+      async function fetchPC(label) {
+        const res = await fetch(`/api/pcs/${encodeURIComponent(label)}`);
+        if (!res.ok) throw new Error("Помилка завантаження ПК");
+        return await res.json(); // { pc_id, label, specs, price, is_busy, busy_until }
+      }
+
+      function fillPanel(pc) {
+        currentPC = pc;
+        pTitle.textContent = pc.label;
+        pSpecs.textContent = pc.specs || "—";
+        pPrice.textContent = pc.price || "—";
+
+        const status = pc.is_busy ? "busy" : "free";
+        pStatus.className = "badge " + status;
+        pStatus.textContent = pc.is_busy ? "Зайнятий" : "Вільний";
+
+        if (pc.is_busy && pc.busy_until) {
+          pUntilWrap.style.display = "";
+          pUntil.textContent = formatTime(pc.busy_until);
+        } else {
+          pUntilWrap.style.display = "none";
+        }
+
+        btnBook.disabled = pc.is_busy;
+        btnBook.textContent = pc.is_busy
+          ? "Недоступно"
+          : "Оплатити / Забронювати";
+      }
+
+      // 🔹 Позначити місце як зайняте на карті (локально)
+      function markSeatBusy(label, until) {
+        const seat = document.querySelector(
+          `.seat[data-code="${CSS.escape(label)}"]`
+        );
+        if (!seat) return;
+        seat.classList.remove("free", "soon");
+        seat.classList.add("busy");
+
+        const badge = seat.querySelector(".badge");
+        if (badge) {
+          badge.className = "badge busy";
+          badge.textContent = "Зайнятий";
+        }
+
+        let p = seat.querySelector("p");
+        if (!p) {
+          p = document.createElement("p");
+          seat.appendChild(p);
+        }
+        p.textContent = "До: " + (until ? formatTime(until) : "—");
+      }
+
+      // Кліки по місцях
+      document.querySelectorAll(".seat").forEach((seat) => {
+        seat.addEventListener("click", async () => {
+          const label = seat.dataset.code;
+          try {
+            const pc = await fetchPC(label);
+            fillPanel(pc);
+            panel.classList.add("active");
+          } catch (e) {
+            alert("❌ Не вдалося отримати дані ПК");
+          }
+        });
+      });
+
+      btnClose.addEventListener("click", () =>
+        panel.classList.remove("active")
+      );
+      btnCancel.addEventListener("click", () =>
+        panel.classList.remove("active")
+      );
+
+      // Бронювання
+      btnBook.addEventListener("click", async () => {
+        if (!currentPC) return;
+        const hours = Number(pHours.value || 1);
+        if (!Number.isFinite(hours) || hours < 1)
+          return alert("Вкажіть тривалість від 1 години");
+
+        try {
+          const res = await fetch("/api/bookings", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              user_id: userId,
+              pc_id: currentPC.pc_id,
+              hours,
+            }),
+          });
+
+          if (!res.ok) throw new Error("Помилка бронювання");
+          const booking = await res.json();
+
+          // 🔹 локально оновлюємо карту
+          markSeatBusy(currentPC.label, booking.end_time);
+
+          // 🔹 (опційно) оновлюємо панель реальними даними з БД
+          try {
+            const fresh = await fetchPC(currentPC.label);
+            fillPanel(fresh);
+          } catch {}
+
+          alert(
+            `✅ Заброньовано ${currentPC.label} на ${hours} год. До сплати: ₴${booking.price}`
+          );
+          panel.classList.add("active"); // залишаємо відкритою з оновленим статусом
+        } catch (e) {
+          alert("❌ " + e.message);
+        }
+      });
+    </script>
+  </body>
+</html>

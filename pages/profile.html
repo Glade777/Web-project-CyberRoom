@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профіль</title>
+
+    <link rel="stylesheet" href="/css/loginStyle.css" />
+    <link rel="stylesheet" href="/css/profile.css" />
+  </head>
+
+  <body class="auth">
+    <div class="wrapper">
+      <h1>Мій профіль</h1>
+
+      <form class="profile-form">
+        <div class="field">
+          <label for="nickname">Нікнейм</label>
+          <input id="nickname" type="text" placeholder="Dmytro" required />
+        </div>
+
+        <div class="field">
+          <label for="username">Ім’я користувача (логін)</label>
+          <input id="username" type="text" placeholder="dmytro777" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Електронна пошта</label>
+          <input id="email" type="email" placeholder="you@gmail.com" required />
+        </div>
+
+        <div class="field">
+          <label for="password">Новий пароль</label>
+          <input id="password" type="password" placeholder="••••••••" />
+        </div>
+
+        <div class="field">
+          <label for="confirm">Підтвердіть пароль</label>
+          <input id="confirm" type="password" placeholder="••••••••" />
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn">Зберегти</button>
+          <a href="user.html" class="btn btn-outline">Назад</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

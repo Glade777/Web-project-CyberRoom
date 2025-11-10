@@ -1,0 +1,29 @@
+{
+  "name": "web_project",
+  "version": "1.0.0",
+  "description": "**CyberRoom** — це веб-застосунок, створений для зручного бронювання комп’ютерів, перегляду актуальних ігор та участі у турнірах.  \r Проєкт поєднує сучасний дизайн, зручну навігацію та адаптивність для комфортної роботи на будь-якому пристрої.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Glade777/Web-project-CyberRoom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Glade777/Web-project-CyberRoom/issues"
+  },
+  "homepage": "https://github.com/Glade777/Web-project-CyberRoom#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}
